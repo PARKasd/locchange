@@ -8,19 +8,42 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showingActionSheet = false
     
     private let dynamicPath = "/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist"
     var body: some View {
-        VStack{
-            Button("시작") {
-                plistChange(plistPath: dynamicPath, key: "h63QSdBCiT/z0WU6rdQv6Q", value: "US")
+        NavigationView{
+            VStack{
+                Image("Logo").resizable().frame(width: 150,height: 150)
+                Text("Locchange")
+                    .font(.title2)
+                    .fontWeight(.bold)
                 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 10){
-                    plistChange(plistPath: dynamicPath, key: "zHeENZu+wbg7PUprwNwBWg", value: "LL/A")
+                Button("시작") {
+                    plistChange(plistPath: dynamicPath, key: "h63QSdBCiT/z0WU6rdQv6Q", value: "US")
                     
                     DispatchQueue.main.asyncAfter(deadline: .now() + 10){
-                        respring()
-                    }}}.padding()
+                        plistChange(plistPath: dynamicPath, key: "zHeENZu+wbg7PUprwNwBWg", value: "LL/A")
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 10){
+                            respring()
+                        }}}.padding()
+            }
+            .navigationBarItems(trailing:
+                Button(action: {
+                    showingActionSheet = true
+                }) {
+                    Image(systemName: "info.circle")
+                }
+                .confirmationDialog("Select",
+                                    isPresented: $showingActionSheet,
+                                    actions: {
+                Link("Developed by parkm04", destination: URL(string: "https://toss.me/parkm04")!)
+                Link("Designed by gamjanakg", destination: URL(string: "https://toss.me/gamjanakg")!)
+                Link("Discord", destination: URL(string: "https://discord.gg/4CepjXqVzK")!)
+                Button("Dismiss", role: .cancel) { }
+            })
+            )
         }
         }
     }
