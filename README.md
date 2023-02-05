@@ -11,3 +11,10 @@ CVE-2022-46689 취약점 이용</br>
 
 <h2>다운로드</h2>
 https://github.com/PARKasd/locchange/releases
+
+<h3> todo list </h3>
+<br>
+iOS 버전에 따른 다른 PoC 적용 <br>
+통신사 이름 숨기기 기능 추가 <br>
+Ian Beer PoC로 변경 <br>
+UI 리빌딩 <br>
