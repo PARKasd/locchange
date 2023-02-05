@@ -10,4 +10,4 @@ CVE-2022-46689 취약점 이용</br>
 
 
 <h2>다운로드</h2>
-[다운로드] (https://github.com/PARKasd/locchange/releases)
+https://github.com/PARKasd/locchange/releases
