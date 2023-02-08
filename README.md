@@ -18,3 +18,7 @@ iOS 버전에 따른 다른 PoC 적용 <br>
 통신사 이름 숨기기 기능 추가 <br>
 Ian Beer PoC로 변경 <br>
 UI 리빌딩 <br>
+
+<h1> non-Korean notification </h1>
+This app is mainly for Korean. If you want to make some modification, Use Cowabunga(https://github.com/leminlimez/Cowabunga) <br>
+But, If you still want to use this app, You must wait for untested beta version. I'm not sure with other varient.
