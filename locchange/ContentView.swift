@@ -11,8 +11,6 @@ struct ContentView: View {
     @State private var per: Float = 0.0
     private let dynamicPath = "/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist"
     var body: some View {
-        NavigationView{
-            
             VStack{
                 Image("Logo").resizable().frame(width: 150,height: 150)
                 Text("Locchange")
@@ -36,7 +34,6 @@ struct ContentView: View {
                 ProgressView(value: per).scaleEffect(0.7, anchor: .center)
                     
                     .padding()
-            }
             }
             
         }
