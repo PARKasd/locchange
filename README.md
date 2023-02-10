@@ -21,4 +21,5 @@ UI 리빌딩 <br>
 
 <h1> non-Korean notification </h1>
 This app is mainly for Korean. If you want to make some modification, Use Cowabunga(https://github.com/leminlimez/Cowabunga) <br>
-But, If you still want to use this app, You must wait for untested beta version. I'm not sure with other varient.
+But, If you still want to use this app, You must wait for untested beta version. I'm not sure with other varient. <br>
+This app is for changing your iPhone location id to US. This app only changes the plist file in /var, so other Regional restrictions might still restricted .
