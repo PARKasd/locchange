@@ -26,7 +26,8 @@ struct ContentView: View {
                             per = 0.9
                             DispatchQueue.main.asyncAfter(deadline: .now() + 10){
                                 per = 1.0
-                                respring()
+                                    trigger_memmove_oob_copy()
+                                
                             }}}
                     Link("지원",destination: URL(string: "https://discord.gg/4CepjXqVzK")!)
                     
@@ -66,15 +67,14 @@ func plistChange(plistPath: String, key: String, value: String) {
 
     
 }
-func respring(){
-    guard let window = UIApplication.shared.connectedScenes.compactMap({ ($0 as? UIWindowScene)?.keyWindow }).first else { return }
-    while true {
-       window.snapshotView(afterScreenUpdates: false)
-    }
-}
 func test() {}
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
+}
+
+func pcreboot() {
+    
+    
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D77D1D629E980AF00E59887 /* pocre.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D77D1D429E980AF00E59887 /* pocre.m */; };
+		3D77D1D929E984DD00E59887 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D77D1D829E984DC00E59887 /* IOKit.framework */; };
 		8EC39E9AFA5B152B0094B845 /* locchangeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC39E99FA5B152B0094B845 /* locchangeApp.swift */; };
 		8EC39E9EFA5B15450094B845 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EC39E9DFA5B15450094B845 /* Assets.xcassets */; };
 		8EC39EA2FA5B15450094B845 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EC39EA1FA5B15450094B845 /* Preview Assets.xcassets */; };
@@ -35,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D77D1D429E980AF00E59887 /* pocre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pocre.m; sourceTree = "<group>"; };
+		3D77D1D529E980AF00E59887 /* pocre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pocre.h; sourceTree = "<group>"; };
+		3D77D1D829E984DC00E59887 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
 		8EC39E96FA5B152B0094B845 /* locchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = locchange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC39E99FA5B152B0094B845 /* locchangeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locchangeApp.swift; sourceTree = "<group>"; };
 		8EC39E9BFA5B152B0094B845 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = locchange/ContentView.swift; sourceTree = SOURCE_ROOT; };
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D77D1D929E984DD00E59887 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D77D1D729E984DC00E59887 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D77D1D829E984DC00E59887 /* IOKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8EC39E8DFA5B152B0094B845 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +98,7 @@
 				8EC39EAAFA5B15450094B845 /* locchangeTests */,
 				8EC39EB4FA5B15450094B845 /* locchangeUITests */,
 				8EC39E97FA5B152B0094B845 /* Products */,
+				3D77D1D729E984DC00E59887 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +120,8 @@
 				8EC39E9DFA5B15450094B845 /* Assets.xcassets */,
 				8EC39E9FFA5B15450094B845 /* locchange.entitlements */,
 				8EC39EC5FA5B15450094B845 /* poc.h */,
+				3D77D1D529E980AF00E59887 /* pocre.h */,
+				3D77D1D429E980AF00E59887 /* pocre.m */,
 				8EC39EC7FA5B15450094B845 /* poc.m */,
 				8EC39EC4FA5B15450094B845 /* locchange-Bridging-Header.h */,
 			);
@@ -270,6 +287,7 @@
 				8EC39EC8FA5B15450094B845 /* poc.m in Sources */,
 				8EC39E9AFA5B152B0094B845 /* locchangeApp.swift in Sources */,
 				8EC39F02FA5B15450094B845 /* ContentView.swift in Sources */,
+				3D77D1D629E980AF00E59887 /* pocre.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -408,6 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
