@@ -27,3 +27,4 @@ This app is for changing your iPhone location id to US. This app only changes th
 
 
 <h2> Using CVE-2023-28206 for reboot. May Not work </h2>
+<h2> Beta repo(https://github.com/PARKasd/locchange-beta)
