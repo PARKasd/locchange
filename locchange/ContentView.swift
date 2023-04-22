@@ -43,7 +43,7 @@ struct ContentView: View {
         .popup(isPresented: $EndPopup) { // 3
                 HStack { // 4
                     Spacer()
-                    Text("Ended. Reboot with key combo is recommended.")
+                    Text("Ended. Reboot with key combo or try reboot option.(May Not Work)")
                         .font(.headline)
                         .frame(width: 400, height: 60)
                         .cornerRadius(60.0)
