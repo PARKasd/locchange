@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D52900129F3A9A4009AE7E4 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 3D52900029F3A9A4009AE7E4 /* PopupView */; };
+		3D52900529F3AB74009AE7E4 /* grant_full_disk_access.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D52900229F3AB74009AE7E4 /* grant_full_disk_access.m */; };
+		3D52900929F3AB7C009AE7E4 /* helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D52900629F3AB7C009AE7E4 /* helpers.m */; };
+		3D52900A29F3AB7C009AE7E4 /* vm_unaligned_copy_switch_race.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D52900729F3AB7C009AE7E4 /* vm_unaligned_copy_switch_race.c */; };
 		3D77D1D629E980AF00E59887 /* pocre.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D77D1D429E980AF00E59887 /* pocre.m */; };
-		3D77D1D929E984DD00E59887 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D77D1D829E984DC00E59887 /* IOKit.framework */; };
+		3DC635F729E99DA70009FC17 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D77D1D829E984DC00E59887 /* IOKit.framework */; };
 		8EC39E9AFA5B152B0094B845 /* locchangeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC39E99FA5B152B0094B845 /* locchangeApp.swift */; };
 		8EC39E9EFA5B15450094B845 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EC39E9DFA5B15450094B845 /* Assets.xcassets */; };
 		8EC39EA2FA5B15450094B845 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EC39EA1FA5B15450094B845 /* Preview Assets.xcassets */; };
 		8EC39EACFA5B15450094B845 /* locchangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC39EABFA5B15450094B845 /* locchangeTests.swift */; };
 		8EC39EB6FA5B15450094B845 /* locchangeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC39EB5FA5B15450094B845 /* locchangeUITests.swift */; };
 		8EC39EB8FA5B15450094B845 /* locchangeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC39EB7FA5B15450094B845 /* locchangeUITestsLaunchTests.swift */; };
-		8EC39EC8FA5B15450094B845 /* poc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC39EC7FA5B15450094B845 /* poc.m */; };
 		8EC39F02FA5B15450094B845 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC39E9BFA5B152B0094B845 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D52900229F3AB74009AE7E4 /* grant_full_disk_access.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = grant_full_disk_access.m; path = ../../locchangebeta/locchangebeta/grant_full_disk_access.m; sourceTree = "<group>"; };
+		3D52900329F3AB74009AE7E4 /* helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = helpers.h; path = ../../locchangebeta/locchangebeta/helpers.h; sourceTree = "<group>"; };
+		3D52900429F3AB74009AE7E4 /* grant_full_disk_access.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = grant_full_disk_access.h; path = ../../locchangebeta/locchangebeta/grant_full_disk_access.h; sourceTree = "<group>"; };
+		3D52900629F3AB7C009AE7E4 /* helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = helpers.m; path = ../../locchangebeta/locchangebeta/helpers.m; sourceTree = "<group>"; };
+		3D52900729F3AB7C009AE7E4 /* vm_unaligned_copy_switch_race.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = vm_unaligned_copy_switch_race.c; path = ../../locchangebeta/locchangebeta/vm_unaligned_copy_switch_race.c; sourceTree = "<group>"; };
+		3D52900829F3AB7C009AE7E4 /* vm_unaligned_copy_switch_race.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vm_unaligned_copy_switch_race.h; path = ../../locchangebeta/locchangebeta/vm_unaligned_copy_switch_race.h; sourceTree = "<group>"; };
+		3D52900B29F3AB84009AE7E4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../locchangebeta/locchangebeta/Info.plist; sourceTree = "<group>"; };
 		3D77D1D429E980AF00E59887 /* pocre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pocre.m; sourceTree = "<group>"; };
 		3D77D1D529E980AF00E59887 /* pocre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pocre.h; sourceTree = "<group>"; };
 		3D77D1D829E984DC00E59887 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -52,8 +62,6 @@
 		8EC39EB5FA5B15450094B845 /* locchangeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locchangeUITests.swift; sourceTree = "<group>"; };
 		8EC39EB7FA5B15450094B845 /* locchangeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locchangeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8EC39EC4FA5B15450094B845 /* locchange-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "locchange-Bridging-Header.h"; sourceTree = "<group>"; };
-		8EC39EC5FA5B15450094B845 /* poc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = poc.h; sourceTree = "<group>"; };
-		8EC39EC7FA5B15450094B845 /* poc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = poc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D77D1D929E984DD00E59887 /* IOKit.framework in Frameworks */,
+				3D52900129F3A9A4009AE7E4 /* PopupView in Frameworks */,
+				3DC635F729E99DA70009FC17 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				8EC39EA0FA5B15450094B845 /* Preview Content */,
+				8EC39E99FA5B152B0094B845 /* locchangeApp.swift */,
 				8EC39E98FA5B152B0094B845 /* locchange */,
 				8EC39EAAFA5B15450094B845 /* locchangeTests */,
 				8EC39EB4FA5B15450094B845 /* locchangeUITests */,
@@ -115,15 +125,19 @@
 		8EC39E98FA5B152B0094B845 /* locchange */ = {
 			isa = PBXGroup;
 			children = (
-				8EC39E99FA5B152B0094B845 /* locchangeApp.swift */,
 				8EC39E9BFA5B152B0094B845 /* ContentView.swift */,
 				8EC39E9DFA5B15450094B845 /* Assets.xcassets */,
 				8EC39E9FFA5B15450094B845 /* locchange.entitlements */,
-				8EC39EC5FA5B15450094B845 /* poc.h */,
 				3D77D1D529E980AF00E59887 /* pocre.h */,
 				3D77D1D429E980AF00E59887 /* pocre.m */,
-				8EC39EC7FA5B15450094B845 /* poc.m */,
 				8EC39EC4FA5B15450094B845 /* locchange-Bridging-Header.h */,
+				3D52900429F3AB74009AE7E4 /* grant_full_disk_access.h */,
+				3D52900229F3AB74009AE7E4 /* grant_full_disk_access.m */,
+				3D52900329F3AB74009AE7E4 /* helpers.h */,
+				3D52900629F3AB7C009AE7E4 /* helpers.m */,
+				3D52900729F3AB7C009AE7E4 /* vm_unaligned_copy_switch_race.c */,
+				3D52900829F3AB7C009AE7E4 /* vm_unaligned_copy_switch_race.h */,
+				3D52900B29F3AB84009AE7E4 /* Info.plist */,
 			);
 			path = locchange;
 			sourceTree = "<group>";
@@ -169,6 +183,9 @@
 			dependencies = (
 			);
 			name = locchange;
+			packageProductDependencies = (
+				3D52900029F3A9A4009AE7E4 /* PopupView */,
+			);
 			productName = locchange;
 			productReference = 8EC39E96FA5B152B0094B845 /* locchange.app */;
 			productType = "com.apple.product-type.application";
@@ -242,6 +259,9 @@
 				Base,
 			);
 			mainGroup = 8EC39E8DFA5B152B0094B845;
+			packageReferences = (
+				3D528FFF29F3A9A4009AE7E4 /* XCRemoteSwiftPackageReference "PopupView" */,
+			);
 			productRefGroup = 8EC39E97FA5B152B0094B845 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -284,10 +304,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EC39EC8FA5B15450094B845 /* poc.m in Sources */,
-				8EC39E9AFA5B152B0094B845 /* locchangeApp.swift in Sources */,
 				8EC39F02FA5B15450094B845 /* ContentView.swift in Sources */,
+				8EC39E9AFA5B152B0094B845 /* locchangeApp.swift in Sources */,
+				3D52900529F3AB74009AE7E4 /* grant_full_disk_access.m in Sources */,
 				3D77D1D629E980AF00E59887 /* pocre.m in Sources */,
+				3D52900A29F3AB7C009AE7E4 /* vm_unaligned_copy_switch_race.c in Sources */,
+				3D52900929F3AB7C009AE7E4 /* helpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +396,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -427,7 +449,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -460,11 +482,11 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.parkm.locchange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -501,11 +523,11 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.parkm.locchange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -647,6 +669,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3D528FFF29F3A9A4009AE7E4 /* XCRemoteSwiftPackageReference "PopupView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/PopupView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3D52900029F3A9A4009AE7E4 /* PopupView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D528FFF29F3A9A4009AE7E4 /* XCRemoteSwiftPackageReference "PopupView" */;
+			productName = PopupView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8EC39E8EFA5B152B0094B845 /* Project object */;
 }
