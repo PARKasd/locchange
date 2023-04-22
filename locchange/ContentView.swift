@@ -11,6 +11,11 @@ struct ContentView: View {
 
     @State var EndPopup = false
     @State var RebootWarn = false
+    @State var respringinfo = false
+    @State var respringauto: Bool = true
+    @State var Custom: Bool = false
+    @State var Customcode: String = ""
+    @State var Customregion: String = ""
     private let dynamicPath = "/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist"
     var body: some View {
         VStack{
@@ -18,7 +23,7 @@ struct ContentView: View {
             Text("Locchange")
                 .font(.title2)
                 .fontWeight(.bold)
-            Menu("시작하기"){
+            Menu("Start"){
                 Button("respring") {
                     respring()
                 }
@@ -32,18 +37,31 @@ struct ContentView: View {
                 }
                 
                 Button("change") {
-                    change(code:"LL/A",local:"US")
-                    EndPopup = true
+                    if Custom == false{
+                        change(code:"LL/A",local:"US")
+                    } else {
+                        change(code: Customcode, local: Customregion)
+                    }
+                    if respringauto == true
+                    {
+                        
+                        EndPopup = true
+                        sleep(5)
+                        respring()
+                    } else {
+                        respringinfo = true
+                    }
                 }
                 Link("support",destination: URL(string: "https://discord.gg/4CepjXqVzK")!)
                 
             }
             
         }
+        
         .popup(isPresented: $EndPopup) { // 3
                 HStack { // 4
                     Spacer()
-                    Text("Ended. Reboot with key combo or try reboot option.(May Not Work)")
+                    Text("Ended. Reboot with key combo.")
                         .font(.headline)
                         .frame(width: 400, height: 60)
                         .cornerRadius(60.0)
@@ -75,8 +93,33 @@ struct ContentView: View {
                 .animation(.spring())
                 .closeOnTapOutside(true)
         }
+            
+        .popup(isPresented: $respringinfo) {
+            HStack { // 4
+                Spacer()
+                Text("Ended. Rebooting or Respring is needed.")
+                    .font(.headline)
+                    .frame(width: 300, height: 60)
+                    .cornerRadius(60.0)
+                    .background(Color(red: 0.55, green:0, blue:0).opacity(0.3))
+                Spacer()
             }
+        } customize: {
+            $0
+                .type(.floater())
+                .autohideIn(5)
+                .position(.top)
+                .animation(.spring())
+                .closeOnTapOutside(true)
+        }
+        Toggle("respring after changes", isOn: $respringauto).padding()
+        Toggle("Custom Changes", isOn: $Custom).padding()
         
+        if Custom{
+            TextField("Enter your code. ex) LL/A", text: $Customcode).padding()
+            TextField("Enter your region. ex) KH, US, C,J", text:$Customregion).padding()
+        }
+            }
         
         
     
