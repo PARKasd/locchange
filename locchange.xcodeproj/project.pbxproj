@@ -7,46 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D3565BE29FCD92300526A51 /* vm_unaligned_copy_switch_race.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D3565B729FCD92300526A51 /* vm_unaligned_copy_switch_race.c */; };
+		3D3565BF29FCD92400526A51 /* grant_full_disk_access.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3565B829FCD92300526A51 /* grant_full_disk_access.m */; };
+		3D3565C029FCD92400526A51 /* helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3565BA29FCD92300526A51 /* helpers.m */; };
 		3D52900129F3A9A4009AE7E4 /* PopupView in Frameworks */ = {isa = PBXBuildFile; productRef = 3D52900029F3A9A4009AE7E4 /* PopupView */; };
-		3D52900529F3AB74009AE7E4 /* grant_full_disk_access.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D52900229F3AB74009AE7E4 /* grant_full_disk_access.m */; };
-		3D52900929F3AB7C009AE7E4 /* helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D52900629F3AB7C009AE7E4 /* helpers.m */; };
-		3D52900A29F3AB7C009AE7E4 /* vm_unaligned_copy_switch_race.c in Sources */ = {isa = PBXBuildFile; fileRef = 3D52900729F3AB7C009AE7E4 /* vm_unaligned_copy_switch_race.c */; };
+		3D7457E729FD1F7200D2F401 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D7457E629FD1F7200D2F401 /* Storyboard.storyboard */; };
 		3D77D1D629E980AF00E59887 /* pocre.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D77D1D429E980AF00E59887 /* pocre.m */; };
 		3DC635F729E99DA70009FC17 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D77D1D829E984DC00E59887 /* IOKit.framework */; };
 		8EC39E9AFA5B152B0094B845 /* locchangeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC39E99FA5B152B0094B845 /* locchangeApp.swift */; };
 		8EC39E9EFA5B15450094B845 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EC39E9DFA5B15450094B845 /* Assets.xcassets */; };
 		8EC39EA2FA5B15450094B845 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EC39EA1FA5B15450094B845 /* Preview Assets.xcassets */; };
-		8EC39EACFA5B15450094B845 /* locchangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC39EABFA5B15450094B845 /* locchangeTests.swift */; };
-		8EC39EB6FA5B15450094B845 /* locchangeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC39EB5FA5B15450094B845 /* locchangeUITests.swift */; };
-		8EC39EB8FA5B15450094B845 /* locchangeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC39EB7FA5B15450094B845 /* locchangeUITestsLaunchTests.swift */; };
 		8EC39F02FA5B15450094B845 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC39E9BFA5B152B0094B845 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		8EC39EA8FA5B15450094B845 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8EC39E8EFA5B152B0094B845 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8EC39E95FA5B152B0094B845;
-			remoteInfo = locchange;
-		};
-		8EC39EB2FA5B15450094B845 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8EC39E8EFA5B152B0094B845 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8EC39E95FA5B152B0094B845;
-			remoteInfo = locchange;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		3D52900229F3AB74009AE7E4 /* grant_full_disk_access.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = grant_full_disk_access.m; path = ../../locchangebeta/locchangebeta/grant_full_disk_access.m; sourceTree = "<group>"; };
-		3D52900329F3AB74009AE7E4 /* helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = helpers.h; path = ../../locchangebeta/locchangebeta/helpers.h; sourceTree = "<group>"; };
-		3D52900429F3AB74009AE7E4 /* grant_full_disk_access.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = grant_full_disk_access.h; path = ../../locchangebeta/locchangebeta/grant_full_disk_access.h; sourceTree = "<group>"; };
-		3D52900629F3AB7C009AE7E4 /* helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = helpers.m; path = ../../locchangebeta/locchangebeta/helpers.m; sourceTree = "<group>"; };
-		3D52900729F3AB7C009AE7E4 /* vm_unaligned_copy_switch_race.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = vm_unaligned_copy_switch_race.c; path = ../../locchangebeta/locchangebeta/vm_unaligned_copy_switch_race.c; sourceTree = "<group>"; };
-		3D52900829F3AB7C009AE7E4 /* vm_unaligned_copy_switch_race.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vm_unaligned_copy_switch_race.h; path = ../../locchangebeta/locchangebeta/vm_unaligned_copy_switch_race.h; sourceTree = "<group>"; };
-		3D52900B29F3AB84009AE7E4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../locchangebeta/locchangebeta/Info.plist; sourceTree = "<group>"; };
+		3D3565B729FCD92300526A51 /* vm_unaligned_copy_switch_race.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vm_unaligned_copy_switch_race.c; sourceTree = "<group>"; };
+		3D3565B829FCD92300526A51 /* grant_full_disk_access.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = grant_full_disk_access.m; sourceTree = "<group>"; };
+		3D3565B929FCD92300526A51 /* vm_unaligned_copy_switch_race.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vm_unaligned_copy_switch_race.h; sourceTree = "<group>"; };
+		3D3565BA29FCD92300526A51 /* helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = helpers.m; sourceTree = "<group>"; };
+		3D3565BB29FCD92300526A51 /* helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helpers.h; sourceTree = "<group>"; };
+		3D3565BC29FCD92300526A51 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D3565BD29FCD92300526A51 /* grant_full_disk_access.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = grant_full_disk_access.h; sourceTree = "<group>"; };
+		3D7457E629FD1F7200D2F401 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		3D77D1D429E980AF00E59887 /* pocre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pocre.m; sourceTree = "<group>"; };
 		3D77D1D529E980AF00E59887 /* pocre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pocre.h; sourceTree = "<group>"; };
 		3D77D1D829E984DC00E59887 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.4.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -56,11 +38,6 @@
 		8EC39E9DFA5B15450094B845 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EC39E9FFA5B15450094B845 /* locchange.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = locchange.entitlements; sourceTree = "<group>"; };
 		8EC39EA1FA5B15450094B845 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8EC39EA7FA5B15450094B845 /* locchangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = locchangeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8EC39EABFA5B15450094B845 /* locchangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locchangeTests.swift; sourceTree = "<group>"; };
-		8EC39EB1FA5B15450094B845 /* locchangeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = locchangeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8EC39EB5FA5B15450094B845 /* locchangeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locchangeUITests.swift; sourceTree = "<group>"; };
-		8EC39EB7FA5B15450094B845 /* locchangeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locchangeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8EC39EC4FA5B15450094B845 /* locchange-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "locchange-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,20 +48,6 @@
 			files = (
 				3D52900129F3A9A4009AE7E4 /* PopupView in Frameworks */,
 				3DC635F729E99DA70009FC17 /* IOKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8EC39EA4FA5B15450094B845 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8EC39EAEFA5B15450094B845 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,8 +68,6 @@
 				8EC39EA0FA5B15450094B845 /* Preview Content */,
 				8EC39E99FA5B152B0094B845 /* locchangeApp.swift */,
 				8EC39E98FA5B152B0094B845 /* locchange */,
-				8EC39EAAFA5B15450094B845 /* locchangeTests */,
-				8EC39EB4FA5B15450094B845 /* locchangeUITests */,
 				8EC39E97FA5B152B0094B845 /* Products */,
 				3D77D1D729E984DC00E59887 /* Frameworks */,
 			);
@@ -116,8 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				8EC39E96FA5B152B0094B845 /* locchange.app */,
-				8EC39EA7FA5B15450094B845 /* locchangeTests.xctest */,
-				8EC39EB1FA5B15450094B845 /* locchangeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,13 +90,14 @@
 				3D77D1D529E980AF00E59887 /* pocre.h */,
 				3D77D1D429E980AF00E59887 /* pocre.m */,
 				8EC39EC4FA5B15450094B845 /* locchange-Bridging-Header.h */,
-				3D52900429F3AB74009AE7E4 /* grant_full_disk_access.h */,
-				3D52900229F3AB74009AE7E4 /* grant_full_disk_access.m */,
-				3D52900329F3AB74009AE7E4 /* helpers.h */,
-				3D52900629F3AB7C009AE7E4 /* helpers.m */,
-				3D52900729F3AB7C009AE7E4 /* vm_unaligned_copy_switch_race.c */,
-				3D52900829F3AB7C009AE7E4 /* vm_unaligned_copy_switch_race.h */,
-				3D52900B29F3AB84009AE7E4 /* Info.plist */,
+				3D3565BD29FCD92300526A51 /* grant_full_disk_access.h */,
+				3D3565B829FCD92300526A51 /* grant_full_disk_access.m */,
+				3D3565BB29FCD92300526A51 /* helpers.h */,
+				3D3565BA29FCD92300526A51 /* helpers.m */,
+				3D3565BC29FCD92300526A51 /* Info.plist */,
+				3D3565B729FCD92300526A51 /* vm_unaligned_copy_switch_race.c */,
+				3D3565B929FCD92300526A51 /* vm_unaligned_copy_switch_race.h */,
+				3D7457E629FD1F7200D2F401 /* Storyboard.storyboard */,
 			);
 			path = locchange;
 			sourceTree = "<group>";
@@ -148,23 +108,6 @@
 				8EC39EA1FA5B15450094B845 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		8EC39EAAFA5B15450094B845 /* locchangeTests */ = {
-			isa = PBXGroup;
-			children = (
-				8EC39EABFA5B15450094B845 /* locchangeTests.swift */,
-			);
-			path = locchangeTests;
-			sourceTree = "<group>";
-		};
-		8EC39EB4FA5B15450094B845 /* locchangeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				8EC39EB5FA5B15450094B845 /* locchangeUITests.swift */,
-				8EC39EB7FA5B15450094B845 /* locchangeUITestsLaunchTests.swift */,
-			);
-			path = locchangeUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,42 +133,6 @@
 			productReference = 8EC39E96FA5B152B0094B845 /* locchange.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8EC39EA6FA5B15450094B845 /* locchangeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8EC39EBEFA5B15450094B845 /* Build configuration list for PBXNativeTarget "locchangeTests" */;
-			buildPhases = (
-				8EC39EA3FA5B15450094B845 /* Sources */,
-				8EC39EA4FA5B15450094B845 /* Frameworks */,
-				8EC39EA5FA5B15450094B845 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8EC39EA9FA5B15450094B845 /* PBXTargetDependency */,
-			);
-			name = locchangeTests;
-			productName = locchangeTests;
-			productReference = 8EC39EA7FA5B15450094B845 /* locchangeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		8EC39EB0FA5B15450094B845 /* locchangeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8EC39EC1FA5B15450094B845 /* Build configuration list for PBXNativeTarget "locchangeUITests" */;
-			buildPhases = (
-				8EC39EADFA5B15450094B845 /* Sources */,
-				8EC39EAEFA5B15450094B845 /* Frameworks */,
-				8EC39EAFFA5B15450094B845 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8EC39EB3FA5B15450094B845 /* PBXTargetDependency */,
-			);
-			name = locchangeUITests;
-			productName = locchangeUITests;
-			productReference = 8EC39EB1FA5B15450094B845 /* locchangeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -239,14 +146,6 @@
 					8EC39E95FA5B152B0094B845 = {
 						CreatedOnToolsVersion = 14.2;
 						LastSwiftMigration = 1420;
-					};
-					8EC39EA6FA5B15450094B845 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 8EC39E95FA5B152B0094B845;
-					};
-					8EC39EB0FA5B15450094B845 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = 8EC39E95FA5B152B0094B845;
 					};
 				};
 			};
@@ -267,8 +166,6 @@
 			projectRoot = "";
 			targets = (
 				8EC39E95FA5B152B0094B845 /* locchange */,
-				8EC39EA6FA5B15450094B845 /* locchangeTests */,
-				8EC39EB0FA5B15450094B845 /* locchangeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -280,20 +177,7 @@
 			files = (
 				8EC39EA2FA5B15450094B845 /* Preview Assets.xcassets in Resources */,
 				8EC39E9EFA5B15450094B845 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8EC39EA5FA5B15450094B845 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8EC39EAFFA5B15450094B845 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				3D7457E729FD1F7200D2F401 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,45 +189,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC39F02FA5B15450094B845 /* ContentView.swift in Sources */,
+				3D3565C029FCD92400526A51 /* helpers.m in Sources */,
 				8EC39E9AFA5B152B0094B845 /* locchangeApp.swift in Sources */,
-				3D52900529F3AB74009AE7E4 /* grant_full_disk_access.m in Sources */,
+				3D3565BE29FCD92300526A51 /* vm_unaligned_copy_switch_race.c in Sources */,
+				3D3565BF29FCD92400526A51 /* grant_full_disk_access.m in Sources */,
 				3D77D1D629E980AF00E59887 /* pocre.m in Sources */,
-				3D52900A29F3AB7C009AE7E4 /* vm_unaligned_copy_switch_race.c in Sources */,
-				3D52900929F3AB7C009AE7E4 /* helpers.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8EC39EA3FA5B15450094B845 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8EC39EACFA5B15450094B845 /* locchangeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8EC39EADFA5B15450094B845 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8EC39EB6FA5B15450094B845 /* locchangeUITests.swift in Sources */,
-				8EC39EB8FA5B15450094B845 /* locchangeUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8EC39EA9FA5B15450094B845 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8EC39E95FA5B152B0094B845 /* locchange */;
-			targetProxy = 8EC39EA8FA5B15450094B845 /* PBXContainerItemProxy */;
-		};
-		8EC39EB3FA5B15450094B845 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8EC39E95FA5B152B0094B845 /* locchange */;
-			targetProxy = 8EC39EB2FA5B15450094B845 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		8EC39EB9FA5B15450094B845 /* Debug */ = {
@@ -466,7 +320,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = locchange/locchange.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = FXUH7DKLCF;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -482,11 +336,11 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 2;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.parkm.locchange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -507,7 +361,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = locchange/locchange.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = FXUH7DKLCF;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -523,11 +377,11 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 2;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.parkm.locchange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -536,96 +390,6 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "locchange/locchange-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		8EC39EBFFA5B15450094B845 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FXUH7DKLCF;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.parkm.locchangeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/locchange.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/locchange";
-			};
-			name = Debug;
-		};
-		8EC39EC0FA5B15450094B845 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FXUH7DKLCF;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.parkm.locchangeTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/locchange.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/locchange";
-			};
-			name = Release;
-		};
-		8EC39EC2FA5B15450094B845 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FXUH7DKLCF;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.parkm.locchangeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = locchange;
-			};
-			name = Debug;
-		};
-		8EC39EC3FA5B15450094B845 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FXUH7DKLCF;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.parkm.locchangeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = locchange;
 			};
 			name = Release;
 		};
@@ -646,24 +410,6 @@
 			buildConfigurations = (
 				8EC39EBCFA5B15450094B845 /* Debug */,
 				8EC39EBDFA5B15450094B845 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8EC39EBEFA5B15450094B845 /* Build configuration list for PBXNativeTarget "locchangeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8EC39EBFFA5B15450094B845 /* Debug */,
-				8EC39EC0FA5B15450094B845 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8EC39EC1FA5B15450094B845 /* Build configuration list for PBXNativeTarget "locchangeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8EC39EC2FA5B15450094B845 /* Debug */,
-				8EC39EC3FA5B15450094B845 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
