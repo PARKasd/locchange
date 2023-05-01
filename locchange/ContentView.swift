@@ -16,7 +16,7 @@ struct ContentView: View {
     @State var Customcode: String = ""
     @State var Customregion: String = ""
     var afteropt = ["Reboot","Respring","Nothing"]
-    @State var selafter = "respring"
+    @State var selafter = "Respring"
     private let dynamicPath = "/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist"
     var body: some View {
         VStack{
@@ -53,10 +53,11 @@ struct ContentView: View {
                 } else {
                     change(code: Customcode, local: Customregion)
                 }
+
+                    EndPopup = true
                 if selafter == "Respring"
                 {
                     
-                    EndPopup = true
                     sleep(5)
                     respring()
                 } else if selafter == "Reboot"
