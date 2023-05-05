@@ -6,131 +6,108 @@
 //
 
 import SwiftUI
-import PopupView
-struct ContentView: View {
 
+struct ContentView: View {
+    @AppStorage("Origicode") var Origicode: String = ""
+    @AppStorage("Origiregion") var Origiregion: String = ""
+    @State private var Avail = false
     @State var EndPopup = false
     @State var RebootWarn = false
     @State var respringinfo = false
+    @State var Ask = false
     @State var Custom = false
+    @State var bakinfo = false
     @State var Customcode: String = ""
     @State var Customregion: String = ""
-    var afteropt = ["Reboot","Respring","Nothing"]
-    @State var selafter = "Respring"
-    private let dynamicPath = "/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist"
+    @State var selafter = ""
     var body: some View {
         VStack{
-            
             Image("Logo").resizable().frame(width: 150,height: 150)
             Text("Locchange")
                 .font(.title2)
                 .fontWeight(.bold)
-            
-            
-            Picker("Choose action after Apply", selection:  $selafter)
-            {ForEach(afteropt, id: \.self)
-                {
-                    Text($0)
-                }
-            }
-            .pickerStyle(.segmented)
-            .padding(.trailing, 10)
-            .cornerRadius(15)
-            .background(.black)
-            if selafter != "nothing"{
-                Text("Your device will \(selafter) after apply")
-            }
-            Toggle("Custom Changes", isOn: $Custom).padding(.trailing, 5)
-            if Custom{
-                TextField("Enter your code. ex) LL/A", text: $Customcode).padding()
-                TextField("Enter your region. ex) KH, US, C,J", text:$Customregion).padding()
-            }
-            
-            Button {
+            Button("Backup")
+            {
+                let dynamicPath = "/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist"
                 
-                if Custom == false{
-                    change(code:"LL/A",local:"US")
-                } else {
-                    change(code: Customcode, local: Customregion)
-                }
-
-                    EndPopup = true
-                if selafter == "Respring"
-                {
-                    
-                    sleep(5)
-                    respring()
-                } else if selafter == "Reboot"
-                {
-                    if #available(iOS 16.0, *)
-                    {
-                        trigger_memmove_oob_copy()
-                    }else{RebootWarn = true
-                    }
-                } else{
-                    respringinfo = true
-                }
-            } label: {
-                Image(systemName: "arrowtriangle.right.circle.fill").resizable().frame(width: 50, height: 50)
+                let stringsData = try! Data(contentsOf: URL(fileURLWithPath: dynamicPath))
+                var plist = try! PropertyListSerialization.propertyList(from: stringsData, options: [], format: nil) as! [String: Any]
+                plist = plist["CacheExtra"] as! [String: Any]
+                Origicode = plist["zHeENZu+wbg7PUprwNwBWg"] as! String
+                Origiregion = plist["h63QSdBCiT/z0WU6rdQv6Q"] as! String
+                bakinfo = true
             }.padding()
-            
+            Button("Start") {
+                let systemVersion = UIDevice.current.systemVersion
+                let ioscheck =  Int(systemVersion.split(separator: ".")[0])!
+                if ioscheck == 16
+                {
+                    if #available(iOS 16.2, *)
+                    {
+                        Avail = true
+                    }
+                    
+                } else if ioscheck == 15
+                {
+                    if #available(iOS 15.7.2, *)
+                    {
+                        Avail = true
+                    }
+                    
+                }
+                if Avail == false
+                {
+                    Ask = true
+                }}.padding()
             Link("Support",destination: URL(string: "https://discord.gg/4CepjXqVzK")!)
         }
-        
-        .popup(isPresented: $EndPopup) { // 3
-            HStack { // 4
-                Spacer()
-                Text("Ended. Reboot with key combo.")
-                    .font(.headline)
-                    .frame(width: 400, height: 60)
-                    .cornerRadius(60.0)
-                    .background(Color.blue.opacity(0.3))
-                Spacer()
+        .alert("Backup Info", isPresented: $bakinfo){
+            
+        }message: {
+            Text("\(Origicode) and \(Origiregion) Saved!")
+        }
+        .alert("Custom Option.", isPresented: $Custom){
+            Text("Wrong Combo may bootloop your device!").padding()
+            TextField("Enter your region ex) US,KH,J,C", text: $Customregion)
+            TextField("Enter your code ex) LL/A,KH/A,J/A", text: $Customcode)
+            Button("Go"){
+                change(code: Customcode, local: Customregion)
+                
             }
         }
-    customize: {
-        $0
-            .type(.floater())
-            .position(.top)
-            .animation(.spring())
-            .closeOnTapOutside(true)
-            .autohideIn(5)
-    }
-    .popup(isPresented: $RebootWarn) {
-        HStack { // 4
-            Spacer()
-            Text("Only Supports ios 16 or above")
-                .font(.headline)
-                .frame(width: 300, height: 40)
-                .cornerRadius(60.0)
-                .background(Color(red: 0.45, green:0, blue:0).opacity(0.4))
-            Spacer()
-        }
-    } customize: {
-        $0
-            .autohideIn(5)
-            .animation(.spring())
-            .closeOnTapOutside(true)
-    }
+
         
-    .popup(isPresented: $respringinfo) {
-        HStack { // 4
-            Spacer()
-            Text("Ended. Rebooting or Respring is needed.")
-                .font(.headline)
-                .frame(width: 300, height: 60)
-                .cornerRadius(60.0)
-                .background(Color(red: 0.55, green:0, blue:0).opacity(0.3))
-            Spacer()
+        
+        .alert("After action", isPresented: $EndPopup)
+        {
+            Button("Reboot", role: .destructive) {if #available(iOS 16.0, *){trigger_memmove_oob_copy()}else{RebootWarn = true}}
+            Button("Respring") {respring2()}
+            Button("Nothing", role: .cancel) {respringinfo = true}
         }
-    } customize: {
-        $0
-            .type(.floater())
-            .autohideIn(5)
-            .position(.top)
-            .animation(.spring())
-            .closeOnTapOutside(true)
-    }
+        
+        .alert("Not Supported", isPresented: $RebootWarn){
+            Button("OK") {}
+        } message:{ Text("Reboot Method only supports iOS 16.0 and above")}
+        
+        .alert("Ended", isPresented: $respringinfo) {
+            Button("OK"){}
+            
+        } message: {Text("Rebooting or Respring is needed.")}
+    
+            .alert("Not Supported!", isPresented: $Avail){Button("OK"){}
+            } message: {Text("As this uses MDC expolit, Your iOS version is not supported")}
+            .alert("Option", isPresented: $Ask){
+                Button("Custom"){Custom = true}
+                Button("Restore"){
+                    change(code:Origicode, local:Origiregion)
+                    EndPopup = true
+                }
+                Button("No", role: .cancel){
+                    change(code:"LL/A",local:"US")
+                    EndPopup = true
+                }
+            } message: {Text("Asking you for Options to perform")}
+
     }
         
         
@@ -210,6 +187,10 @@ struct ContentView: View {
         while true {
             window.snapshotView(afterScreenUpdates: false)
         }}
+    func respring2()
+    {
+        respringBackboard()
+    }
     func plistChange(plistPath: String, key: String, value: String, key2: String, value2: String) {
         let stringsData = try! Data(contentsOf: URL(fileURLWithPath: plistPath))
         
@@ -239,14 +220,12 @@ struct ContentView: View {
             }
         }
     }
-    
+    //credit: DynamicCow
     func change(code: String, local: String)
     {
         
         let dynamicPath = "/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist"
         plistChange(plistPath: dynamicPath, key: "zHeENZu+wbg7PUprwNwBWg", value: code, key2:"h63QSdBCiT/z0WU6rdQv6Q", value2: local)
         }
-
-
-    
 }
+
