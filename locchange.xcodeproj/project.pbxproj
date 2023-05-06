@@ -11,7 +11,7 @@
 		3D3565BF29FCD92400526A51 /* grant_full_disk_access.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3565B829FCD92300526A51 /* grant_full_disk_access.m */; };
 		3D3565C029FCD92400526A51 /* helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D3565BA29FCD92300526A51 /* helpers.m */; };
 		3D77D1D629E980AF00E59887 /* pocre.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D77D1D429E980AF00E59887 /* pocre.m */; };
-		3DC635F729E99DA70009FC17 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D77D1D829E984DC00E59887 /* IOKit.framework */; };
+		3D9566A72A057258006396D0 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D77D1D829E984DC00E59887 /* IOKit.framework */; };
 		8EC39E9AFA5B152B0094B845 /* locchangeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC39E99FA5B152B0094B845 /* locchangeApp.swift */; };
 		8EC39E9EFA5B15450094B845 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EC39E9DFA5B15450094B845 /* Assets.xcassets */; };
 		8EC39EA2FA5B15450094B845 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EC39EA1FA5B15450094B845 /* Preview Assets.xcassets */; };
@@ -43,7 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DC635F729E99DA70009FC17 /* IOKit.framework in Frameworks */,
+				3D9566A72A057258006396D0 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,12 +180,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EC39F02FA5B15450094B845 /* ContentView.swift in Sources */,
-				3D3565C029FCD92400526A51 /* helpers.m in Sources */,
 				8EC39E9AFA5B152B0094B845 /* locchangeApp.swift in Sources */,
+				8EC39F02FA5B15450094B845 /* ContentView.swift in Sources */,
 				3D3565BE29FCD92300526A51 /* vm_unaligned_copy_switch_race.c in Sources */,
-				3D3565BF29FCD92400526A51 /* grant_full_disk_access.m in Sources */,
+				3D3565C029FCD92400526A51 /* helpers.m in Sources */,
 				3D77D1D629E980AF00E59887 /* pocre.m in Sources */,
+				3D3565BF29FCD92400526A51 /* grant_full_disk_access.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +332,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 4.0.0;
+				MARKETING_VERSION = 4.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.parkm.locchange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -375,7 +375,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
-				MARKETING_VERSION = 4.0.0;
+				MARKETING_VERSION = 4.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.parkm.locchange;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
