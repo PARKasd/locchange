@@ -1,4 +1,4 @@
-#locchange
+# locchange
 
 <h1> What is it?
 
@@ -12,13 +12,13 @@ This uses CVE 2022 46689 to change your iPhone's region code.
 
 Like Korea & Japan, there are some restrictions to iPhones. This bypasses some restrictions.
 
-##installation
+## installation
 
 I suggest you to use [Testflight]("https://testflight.apple.com/join/M4bvduzr").
 
 or You can use [Releases]("https://github.com/PARKasd/locchange/releases"). Sideload ipa.
 
-###Feature 
+### Feature 
 
 1. Backup & Restore Original Code.
 2. Custom your codes.
