@@ -1,14 +1,11 @@
 # locchange
 
-<h1> What is it?
+<h1> What is it?</h1>
 
----
 
 This uses CVE 2022 46689 to change your iPhone's region code. 
 
-<h2> Reason for Changing that
-
----
+<h2> Reason for Changing that</h2>
 
 Like Korea & Japan, there are some restrictions to iPhones. This bypasses some restrictions.
 
