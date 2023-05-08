@@ -47,9 +47,7 @@ struct ContentView: View {
                             Avail = true
                         }
                         
-                    }
-                    if Avail == false
-                    {
+                    }  else{
                         Ask = true
                     }}.padding()
                     .buttonStyle(.borderedProminent)
@@ -69,6 +67,7 @@ struct ContentView: View {
             .alert("App info", isPresented:$appinfo){
                 Link("Discord Server",destination: URL(string: "https://discord.gg/4CepjXqVzK")!)
                 Link("GitHub", destination: URL(string: "https://github.com/PARKasd/locchange")!)
+                Button("Cancel", role:.cancel){}
                 
             } message:{
                 Text("Developed by parkm").padding()
@@ -107,20 +106,25 @@ struct ContentView: View {
                 } message: {Text("Rebooting or Respring is needed.")}
             
                 .alert("Not Supported!", isPresented: $Avail){
-                    Button("OK"){}
-                } message: {Text("As this uses MDC expolit, Your iOS version is not supported")}
+                    Button("OK"){
+                        Ask = true}
+                } message: {Text("Your iOS version is not supported but I'll show you the app")}
             
                 .alert("Option", isPresented: $Ask){
                     
                     Button("Custom"){Custom = true}
-                    Button("Backup Menu"){
-                        backupmenu = true
-                    }
-                    Button("No", role: .cancel){
+                    
+                    Button("Change to US"){
                         change(code:"LL/A",region:"US")
                         EndPopup = true
                     }
+                    
+                    Button("Backup Menu"){
+                        backupmenu = true
+                    }
+                    Button("Cancel", role: .cancel){}
                 } message: {Text("Asking you for Options to perform")}
+                
                 .alert("Backup Menu",isPresented:$backupmenu){
                     Button("Backup current") {
                         let dynamicPath = "/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist"
@@ -138,6 +142,9 @@ struct ContentView: View {
                     Button("Restore Backup"){
                         change(code:Bakcode, region:Bakregion)
                         EndPopup = true
+                    }
+                    Button("Return"){
+                        Ask = true
                     }
                 }
         }.navigationBarTitle("", displayMode: .inline)
