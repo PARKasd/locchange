@@ -11,7 +11,7 @@ Like Korea & Japan, there are some restrictions to iPhones. This bypasses some r
 
 ## installation
 
-I suggest you to use [Testflight](https://testflight.apple.com/join/M4bvduzr).
+I suggest you to use [~~Testflight~~](https://testflight.apple.com/join/M4bvduzr).Banned by Apple :<
 
 or You can use [Releases](https://github.com/PARKasd/locchange/releases). Sideload ipa.
 
