@@ -11,145 +11,115 @@ struct ContentView: View {
     @AppStorage("Bakcode") var Bakcode: String = ""
     @AppStorage("Bakregion") var Bakregion: String = ""
     @State private var Avail = false
-    @State var appinfo = false
     @State var EndPopup = false
-    @State var RebootWarn = false
     @State var respringinfo = false
-    @State var Ask = false
-    @State var Custom = false
-    @State var backupmenu = false
     @State var bakinfo = false
     @State var Customcode: String = ""
     @State var Customregion: String = ""
     @State var selafter = ""
     var body: some View {
-        NavigationView {
+
+        TabView {
             VStack{
                 Image("Logo").resizable().frame(width: 150,height: 150)
-                Text("Locchange")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                Text("-Changes your region code-").fontWeight(.bold)
-                Button("Start") {
-                    let systemVersion = UIDevice.current.systemVersion
-                    let ioscheck =  Int(systemVersion.split(separator: ".")[0])!
-                    if ioscheck == 16
-                    {
-                        if #available(iOS 16.2, *)
-                        {
-                            Avail = true
-                        }
-                        
-                    } else if ioscheck == 15
-                    {
-                        if #available(iOS 15.7.2, *)
-                        {
-                            Avail = true
-                        }
-                        
-                    }  else{
-                        Ask = true
-                    }}.padding()
+                Text("region code to LL/A").padding()
+                Button("Run") {
+                    change(code:"LL/A",region:"US")
+                    EndPopup = true
+                }}.padding()
+                .buttonStyle(.borderedProminent)
+                .cornerRadius(10)
+                .tint(.blue)
+                .tabItem{
+                    Image(systemName: "1.square.fill")
+                    Text("Run")
+                }
+            VStack{
+                Text("Wrong Combo may bootloop your device!").fontWeight(.bold).padding()
+                TextField("Enter your region ex) US,KH,J,C", text: $Customregion).padding()
+                TextField("Enter your code ex) LL/A,KH/A,J/A", text: $Customcode).padding()
+                Button("Run"){
+                    change(code: Customcode, region: Customregion)
+                    EndPopup = true
+                }}.padding()
+                .buttonStyle(.borderedProminent)
+                .cornerRadius(10)
+                .tint(.red)
+
+            .tabItem{
+                Image(systemName: "2.square.fill")
+                Text("Advanced")
+            }
+            VStack{
+                Button("Backup current") {
+                    let dynamicPath = "/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist"
+                    let stringsData = try! Data(contentsOf: URL(fileURLWithPath: dynamicPath))
+                    var plist = try! PropertyListSerialization.propertyList(from: stringsData, options: [], format: nil) as! [String: Any]
+                    plist = plist["CacheExtra"] as! [String: Any]
+                    Bakcode = plist["zHeENZu+wbg7PUprwNwBWg"] as! String
+                    Bakregion = plist["h63QSdBCiT/z0WU6rdQv6Q"] as! String
+                    bakinfo = true
+                }.padding()
+                    .buttonStyle(.borderedProminent)
+                    .cornerRadius(10)
+                    .tint(.green)
+
+                Button("Check Backup")
+                {
+                    bakinfo = true
+                }.padding()
                     .buttonStyle(.borderedProminent)
                     .cornerRadius(10)
                     .tint(.blue)
+
+                Button("Restore Backup"){
+                    change(code:Bakcode, region:Bakregion)
+                    EndPopup = true
+                }.padding()
+                    .buttonStyle(.borderedProminent)
+                    .cornerRadius(10)
+                    .tint(.blue)
+
             }
-            .toolbar {
-                ToolbarItemGroup {
-                    HStack(spacing: 20) {
-                        
-                        Button{
-                            appinfo = true
-                        } label: {Label("Profile", systemImage: "info.circle")}
-                    }
-                }
-            }
-            .alert("App info", isPresented:$appinfo){
-                Link("Discord Server",destination: URL(string: "https://discord.gg/4CepjXqVzK")!)
-                Link("GitHub", destination: URL(string: "https://github.com/PARKasd/locchange")!)
-                Button("Cancel", role:.cancel){}
-                
-            } message:{
-                Text("Developed by parkm").padding()
-                Text("Some functions were from Dynamic Cow").padding()
-            }
-            .alert("Backup Info", isPresented: $bakinfo){
-                
-            }message: {
-                Text("\(Bakcode) and \(Bakregion) Saved!")
+            .tabItem{
+                Image(systemName: "3.square.fill")
+                Text("Backup")
             }
             
-            .alert("Custom Option.", isPresented: $Custom){
-                Text("Wrong Combo may bootloop your device!").padding()
-                TextField("Enter your region ex) US,KH,J,C", text: $Customregion)
-                TextField("Enter your code ex) LL/A,KH/A,J/A", text: $Customcode)
-                Button("Run"){
-                    change(code: Customcode, region: Customregion)
-                    
-                }
+            VStack{
+                Text("Developed by parkm").padding()
+                Text("Some functions were from Dynamic Cow")
+                Link("GitHub", destination: URL(string: "https://github.com/PARKasd/locchange")!)
             }
+                .tabItem{
+                    Image(systemName: "4.square.fill")
+                    Text("Credit")
+                }
+        }
+            .alert("Backup Info", isPresented: $bakinfo)
+            {
+                
+            } message: {Text("\(Bakcode) and \(Bakregion) Saved!")}
+            
             
             .alert("After action", isPresented: $EndPopup)
             {
-                Button("Reboot", role: .destructive) {if #available(iOS 16.0, *){trigger_memmove_oob_copy()}else{RebootWarn = true}}
                 Button("Respring") {respring()}
                 Button("Nothing", role: .cancel) {respringinfo = true}
             }
             
-            .alert("Not Supported", isPresented: $RebootWarn){
-                Button("OK") {}
-            } message:{ Text("Reboot Method only supports iOS 16.0 and above")}
             
-                .alert("Ended", isPresented: $respringinfo) {
-                    Button("OK"){}
+            .alert("Ended", isPresented: $respringinfo)
+            {
+                Button("OK"){}
                     
-                } message: {Text("Rebooting or Respring is needed.")}
+            } message: {Text("Rebooting or Respring is needed.")}
             
-                .alert("Not Supported!", isPresented: $Avail){
-                    Button("OK"){
-                        Ask = true}
-                } message: {Text("Your iOS version is not supported but I'll show you the app")}
-            
-                .alert("Option", isPresented: $Ask){
-                    
-                    Button("Custom"){Custom = true}
-                    
-                    Button("Change to US"){
-                        change(code:"LL/A",region:"US")
-                        EndPopup = true
-                    }
-                    
-                    Button("Backup Menu"){
-                        backupmenu = true
-                    }
-                    Button("Cancel", role: .cancel){}
-                } message: {Text("Asking you for Options to perform")}
+          
                 
-                .alert("Backup Menu",isPresented:$backupmenu){
-                    Button("Backup current") {
-                        let dynamicPath = "/var/containers/Shared/SystemGroup/systemgroup.com.apple.mobilegestaltcache/Library/Caches/com.apple.MobileGestalt.plist"
-                        let stringsData = try! Data(contentsOf: URL(fileURLWithPath: dynamicPath))
-                        var plist = try! PropertyListSerialization.propertyList(from: stringsData, options: [], format: nil) as! [String: Any]
-                        plist = plist["CacheExtra"] as! [String: Any]
-                        Bakcode = plist["zHeENZu+wbg7PUprwNwBWg"] as! String
-                        Bakregion = plist["h63QSdBCiT/z0WU6rdQv6Q"] as! String
-                        bakinfo = true
-                    }
-                    Button("Check Backup")
-                    {
-                        bakinfo = true
-                    }
-                    Button("Restore Backup"){
-                        change(code:Bakcode, region:Bakregion)
-                        EndPopup = true
-                    }
-                    Button("Return"){
-                        Ask = true
-                    }
-                }
-        }.navigationBarTitle("", displayMode: .inline)
+        }
 
-    }
+    
         
         
     
